@@ -180,7 +180,7 @@ function calcForm(e){
     var cac = ((event + marketing + another) / salesq)
     if (isNaN(cac)) cac=0;
     var app11 = document.querySelector('#cac');  
-    var template11 = `CAC: `+cac.toFixed(2) + `%`;
+    var template11 = `CAC: `+cac.toFixed(2);
     saferInnerHTML(app11, template11);
 
     //Cria array de dados com todos os dados da planilha
