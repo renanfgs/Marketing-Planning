@@ -170,7 +170,7 @@ function calcForm(e){
     saferInnerHTML(app11, template11);
 
     //Cria array de dados com todos os dados da planilha
-    var data = [month.selectedIndex,leadcoast,conv,tkt,salesq,sales,returnf,roi,rofa,
+    var data = [month.selectedIndex,invest, leadcoast,conv,tkt,salesq,sales,returnf,roi,rofa,
         rogo,roin, roli,rose,royo,cac];
         console.log(data);
 }
