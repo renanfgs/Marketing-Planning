@@ -6,6 +6,9 @@ document.getElementById("planning").addEventListener("submit",calcForm);
 function calcForm(e){
     e.preventDefault();
 
+    //seleciona o mes
+    var month = document.getElementById("month");    
+        
     //Recebe valores de evento do HTML
 
     var invest=getIputVal("invest");
@@ -165,6 +168,11 @@ function calcForm(e){
     var app11 = document.querySelector('#cac');  
     var template11 = `CAC: `+cac.toFixed(2) + `%`;
     saferInnerHTML(app11, template11);
+
+    //Cria array de dados com todos os dados da planilha
+    var data = [month.selectedIndex,leadcoast,conv,tkt,salesq,sales,returnf,roi,rofa,
+        rogo,roin, roli,rose,royo,cac];
+        console.log(data);
 }
 
 //Função para pegar os valores
