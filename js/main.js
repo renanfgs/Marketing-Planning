@@ -1,3 +1,17 @@
+    
+//snippet Firebase Realtime Database
+var config = {
+    apiKey: "AIzaSyDXEKD6kYZi3rCVnOevylXnHDbM8gDqemw",
+    authDomain: "claquete-3176f.firebaseapp.com",
+    databaseURL: "https://claquete-3176f.firebaseio.com",
+    projectId: "claquete-3176f",
+    storageBucket: "claquete-3176f.appspot.com",
+    messagingSenderId: "138161165527"
+        };
+    firebase.initializeApp(config);
+
+    //reference messages collection
+    var mktData = firebase.database().ref("mktData");
 
 //listen
 document.getElementById("planning").addEventListener("submit",calcForm);
@@ -173,12 +187,18 @@ function calcForm(e){
     var data = [month.selectedIndex,invest, leadcoast,conv,tkt,salesq,sales,returnf,roi,rofa,
         rogo,roin, roli,rose,royo,cac];
         console.log(data);
+        gravaDados(data);
+}
+
+function gravaDados(data){
+    var newLeadRef = mktData.push();
+    newLeadRef.set({
+        data:data,
+    }
+    )
 }
 
 //Função para pegar os valores
 function getIputVal(id){
     return document.getElementById(id).value;
 }
-
-
-
